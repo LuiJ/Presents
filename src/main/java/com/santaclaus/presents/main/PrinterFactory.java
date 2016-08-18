@@ -10,15 +10,13 @@ public class PrinterFactory {
     private final static String CONSOLE_PRINTER = "console";
     private final static String FILE_PRINTER = "file";
     
-    private String printerType;
     private String filePath;
     
-    public PrinterFactory(String printerType, String filePath){
-        this.printerType = printerType;
+    public PrinterFactory(String filePath){
         this.filePath = filePath;
     }
     
-    public PresentPrinter create(){
+    public PresentPrinter create(String printerType){
         
         PresentPrinter printer = null;
         

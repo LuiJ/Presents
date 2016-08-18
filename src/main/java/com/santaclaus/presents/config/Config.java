@@ -7,17 +7,23 @@ public enum Config {
     
     INSTANCE;
     
+    private final String CONFIGURATION_FILE_NAME = "cofiguration";
+    private final String PRINTER_TYPE = "printer";
+    private final String FILE_PATH = "output-file";
+    private final String CREATOR_TYPE = "present-data-source";
+    private final String XML_FILE_PATH = "data-file";
+    
     private String printerType;
     private String filePath;    
-    private String createrType;
+    private String creatorType;
     private String xmlFilePath;
     
     Config(){
-        ResourceBundle config = ResourceBundle.getBundle("cofiguration"); 
-        printerType = config.getString("printer");
-        filePath = config.getString("output-file");
-        createrType = config.getString("present-data-source");
-        xmlFilePath = config.getString("data-file");
+        ResourceBundle config = ResourceBundle.getBundle(CONFIGURATION_FILE_NAME); 
+        printerType = config.getString(PRINTER_TYPE);
+        filePath = config.getString(FILE_PATH);
+        creatorType = config.getString(CREATOR_TYPE);
+        xmlFilePath = config.getString(XML_FILE_PATH);
     }
 
     public String getPrinterType() {
@@ -36,12 +42,12 @@ public enum Config {
         this.filePath = filePath;
     }
 
-    public String getCreaterType() {
-        return createrType;
+    public String getCreatorType() {
+        return creatorType;
     }
 
-    public void setCreaterType(String createrType) {
-        this.createrType = createrType;
+    public void setCreatorType(String creatorType) {
+        this.creatorType = creatorType;
     }
 
     public String getXmlFilePath() {

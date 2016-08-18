@@ -8,7 +8,7 @@ import com.santaclaus.presents.candies.LollipopCandyWithFilling;
 import com.santaclaus.presents.present.Present;
 
 
-public class PresentCreaterStub implements PresentCreater {
+public class PresentCreatorStub implements PresentCreator {
 
     public Present create(){
         

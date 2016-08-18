@@ -2,7 +2,7 @@ package com.santaclaus.presents.main;
 
 import com.santaclaus.presents.config.Config;
 import com.santaclaus.presents.present.Present;
-import com.santaclaus.presents.present.factory.PresentCreater;
+import com.santaclaus.presents.present.factory.PresentCreator;
 import com.santaclaus.presents.view.PresentPrinter;
 
 
@@ -11,18 +11,18 @@ public class Main {
     public static void main(String [] args){
         
         Config config = Config.INSTANCE;   
-        String createrType = config.getCreaterType();
+        String creatorType = config.getCreatorType();
         String xmlFilePath = config.getXmlFilePath();
         
-        PresentCreaterFactory createrFactory = new PresentCreaterFactory(createrType, xmlFilePath);        
-        PresentCreater presentCreater = createrFactory.create();        
-        Present present = presentCreater.create();
+        PresentCreatorFactory creatorFactory = new PresentCreatorFactory(xmlFilePath);        
+        PresentCreator presentCreator = creatorFactory.create(creatorType);        
+        Present present = presentCreator.create();
         
         String printerType = config.getPrinterType();
         String filePath = config.getFilePath();
         
-        PrinterFactory printerFactory = new PrinterFactory(printerType, filePath);
-        PresentPrinter printer = printerFactory.create();
+        PrinterFactory printerFactory = new PrinterFactory(filePath);
+        PresentPrinter printer = printerFactory.create(printerType);
         printer.print(present);
         
     }

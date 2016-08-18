@@ -8,11 +8,11 @@ import com.santaclaus.presents.candies.LollipopCandyWithFilling;
 import com.santaclaus.presents.present.Present;
 
 
-public class PresentCreaterXML implements PresentCreater {
+public class PresentCreatorXML implements PresentCreator {
     
     private String xmlFilePath;
     
-    public PresentCreaterXML(String xmlFilePath){
+    public PresentCreatorXML(String xmlFilePath){
         this.xmlFilePath = xmlFilePath;
     }
 
