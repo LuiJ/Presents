@@ -16,33 +16,32 @@ public class FilePresentPrinter implements PresentPrinter {
         this.path = path;
     }
     
-    public void print(Present present){
-        
-        StringBuilder result = new StringBuilder();
-        
-        List<AbstractCandy> candies = present.getCandies();
-        
-        for (AbstractCandy candy : candies){
-            result.append(candy+"\n");
-        }
-        
-        PresentService calculator = new PresentService();
-        
-        double totalWeight = calculator.getTotalWeight(present);
-        result.append("\nPresent Total weight: "+totalWeight+"\n");
-        
-        double totalCost = calculator.getTotalCost(present);
-        result.append("\nPresent Total Cost: "+totalCost);
-        
-        char[] buffer = new char[result.length()];
-        result.getChars(0, result.length(), buffer, 0);
+    public void print(Present present){       
         
         try (FileWriter file = new FileWriter(path)){
-            file.write(buffer);
+            
+            List<AbstractCandy> candies = present.getCandies();
+        
+            for (AbstractCandy candy : candies){
+                String name = candy.getName();
+                double weight = candy.getWeight();
+                double cost = candy.getCost();
+                file.write("Candy Name: "+name+" --> Weight: "+weight+"; Cost: "+cost+";\n");
+            }
+            
+            PresentService calculator = new PresentService();
+        
+            double totalWeight = calculator.getTotalWeight(present);
+            file.write("\nPresent Total Weight: "+totalWeight+"\n");
+
+            double totalCost = calculator.getTotalCost(present);
+            file.write("\nPresent Total Cost: "+totalCost);
+            
+            System.out.println("\nPresent info has been printed into '"+path+"'.\n");
         }
         catch (IOException e){
-            System.out.println("\nFile '"+path+"' is unavailable !");
-        }       
+            e.printStackTrace();
+        }               
         
     }
     

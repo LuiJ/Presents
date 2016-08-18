@@ -11,8 +11,8 @@ public class LollipopCandy extends AbstractCandy {
     
     public LollipopCandy(){} 
     
-    public LollipopCandy(double weight, double cost, TasteType tasteType){   
-        super(weight, cost);     
+    public LollipopCandy(String name, double weight, double cost, TasteType tasteType){   
+        super(name, weight, cost);     
         this.tasteType = tasteType;
     } 
 

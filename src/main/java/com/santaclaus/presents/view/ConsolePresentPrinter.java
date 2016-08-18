@@ -13,13 +13,16 @@ public class ConsolePresentPrinter implements PresentPrinter {
         List<AbstractCandy> candies = present.getCandies();
         
         for (AbstractCandy candy : candies){
-            System.out.println(candy);
+            String name = candy.getName();
+            double weight = candy.getWeight();
+            double cost = candy.getCost();
+            System.out.println("Candy Name: "+name+" --> Weight: "+weight+"; Cost: "+cost+";");
         }
         
         PresentService calculator = new PresentService();
         
         double totalWeight = calculator.getTotalWeight(present);
-        System.out.println("\nPresent Total weight: "+totalWeight);
+        System.out.println("\nPresent Total Weight: "+totalWeight);
         
         double totalCost = calculator.getTotalCost(present);
         System.out.println("\nPresent Total Cost: "+totalCost);

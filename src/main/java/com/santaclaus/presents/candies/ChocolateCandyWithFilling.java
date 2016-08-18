@@ -11,10 +11,10 @@ public class ChocolateCandyWithFilling extends ChocolateCandy {
     
     public ChocolateCandyWithFilling(){}
     
-    public ChocolateCandyWithFilling(double weight, double cost, 
+    public ChocolateCandyWithFilling(String name, double weight, double cost, 
             ChocoType chocoType, FillingType fillingType)
     {
-        super(weight, cost, chocoType);
+        super(name, weight, cost, chocoType);
         this.fillingType = fillingType;
     }
 

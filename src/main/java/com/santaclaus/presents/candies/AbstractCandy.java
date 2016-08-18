@@ -3,14 +3,24 @@ package com.santaclaus.presents.candies;
 
 public abstract class AbstractCandy {
     
+    private String name;
     private double weight;
     private double cost;
     
     public AbstractCandy(){}
     
-    public AbstractCandy(double weight, double cost){
+    public AbstractCandy(String name, double weight, double cost){
+        this.name = name;
         this.weight = weight;
         this.cost = cost;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
     
     public void setWeight(double weight){
@@ -29,6 +39,6 @@ public abstract class AbstractCandy {
     
     @Override
     public String toString(){
-        return this.getClass().getSimpleName()+" --> weight: "+weight+"; cost: "+cost+";";
+        return "Candy Name: "+name+" --> Weight: "+weight+"; Cost: "+cost+";";
     }
 }

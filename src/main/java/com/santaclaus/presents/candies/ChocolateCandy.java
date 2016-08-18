@@ -10,8 +10,8 @@ public class ChocolateCandy extends AbstractCandy {
     
     public ChocolateCandy(){}
     
-    public ChocolateCandy(double weight, double cost, ChocoType chocoType){   
-        super(weight, cost);     
+    public ChocolateCandy(String name, double weight, double cost, ChocoType chocoType){   
+        super(name, weight, cost);     
         this.chocoType = chocoType;
     } 
 
