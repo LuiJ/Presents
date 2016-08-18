@@ -7,24 +7,24 @@ public enum Config {
     
     INSTANCE;
     
-    private int printerType;
+    private String printerType;
     private String filePath;    
-    private int factoryType;
+    private String createrType;
     private String xmlFilePath;
     
     Config(){
         ResourceBundle config = ResourceBundle.getBundle("cofiguration"); 
-        printerType = Integer.parseInt(config.getString("printer"));
-        filePath = config.getString("printer-url");
-        factoryType = Integer.parseInt(config.getString("factiory"));
-        xmlFilePath = config.getString("factory-xml-url");
+        printerType = config.getString("printer");
+        filePath = config.getString("output-file");
+        createrType = config.getString("present-data-source");
+        xmlFilePath = config.getString("data-file");
     }
 
-    public int getPrinterType() {
+    public String getPrinterType() {
         return printerType;
     }
 
-    public void setPrinterType(int printerType) {
+    public void setPrinterType(String printerType) {
         this.printerType = printerType;
     }
 
@@ -36,12 +36,12 @@ public enum Config {
         this.filePath = filePath;
     }
 
-    public int getFactoryType() {
-        return factoryType;
+    public String getCreaterType() {
+        return createrType;
     }
 
-    public void setFactoryType(int factoryType) {
-        this.factoryType = factoryType;
+    public void setCreaterType(String createrType) {
+        this.createrType = createrType;
     }
 
     public String getXmlFilePath() {
