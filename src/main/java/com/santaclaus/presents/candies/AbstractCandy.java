@@ -3,9 +3,9 @@ package com.santaclaus.presents.candies;
 
 public abstract class AbstractCandy {
         
-    public final String TAG_NAME = "name";
-    public final String TAG_WEIGHT = "weight";
-    public final String TAG_COST = "cost";
+    public static final String TAG_NAME = "name";
+    public static final String TAG_WEIGHT = "weight";
+    public static final String TAG_COST = "cost";
     
     private String name;
     private double weight;

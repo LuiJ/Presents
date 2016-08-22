@@ -7,11 +7,11 @@ public enum Config {
     
     INSTANCE;
     
-    private final String CONFIGURATION_FILE_NAME = "cofiguration";
-    private final String PRINTER_TYPE = "printer";
-    private final String FILE_PATH = "output-file";
-    private final String CREATOR_TYPE = "present-data-source";
-    private final String XML_FILE_PATH = "data-file";
+    private static final String CONFIGURATION_FILE_NAME = "cofiguration";
+    private static final String PRINTER_TYPE = "printer";
+    private static final String FILE_PATH = "output-file";
+    private static final String CREATOR_TYPE = "present-data-source";
+    private static final String XML_FILE_PATH = "data-file";
     
     private String printerType;
     private String filePath;    

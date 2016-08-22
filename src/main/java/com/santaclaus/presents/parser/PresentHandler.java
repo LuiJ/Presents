@@ -11,8 +11,8 @@ import org.xml.sax.helpers.DefaultHandler;
 
 public class PresentHandler extends DefaultHandler {
     
-    private final String TAG_CANDY = "candy";    
-    private final String ATTRIBUTE_TYPE = "type";
+    private static final String TAG_CANDY = "candy";    
+    private static final String ATTRIBUTE_TYPE = "type";
     
     private boolean isTagCandy = false;
     private boolean isStartTag = false;

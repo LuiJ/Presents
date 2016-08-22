@@ -3,7 +3,7 @@ package com.santaclaus.presents.candies;
 
 public class LollipopCandyWithFilling extends LollipopCandy {
     
-    public final String TAG_FILLING_TYPE = "filling-type";
+    public static final String TAG_FILLING_TYPE = "filling-type";
     
     public static enum FillingType {
         Jem, Gum

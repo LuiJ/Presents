@@ -3,7 +3,7 @@ package com.santaclaus.presents.candies;
 
 public class ChocolateCandy extends AbstractCandy {
     
-    public final String TAG_CHOCO_TYPE = "choco-type";
+    public static final String TAG_CHOCO_TYPE = "choco-type";
     
     public static enum ChocoType {
         Dark, Milk, White

@@ -11,7 +11,7 @@ public class CandyFactory {
     private static final String LOLLIPOP_CANDY = "lollipop";
     private static final String LOLLIPOP_CANDY_WITH_FILLING = "lollipopWithFilling";
 
-    private static CandyBuilder builder;
+    private static AbstractCandyBuilder builder;
     
     public static AbstractCandy create(Properties candyProperties, String candyType){
         
