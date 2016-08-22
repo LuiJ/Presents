@@ -3,6 +3,8 @@ package com.santaclaus.presents.candies;
 
 public class ChocolateCandyWithFilling extends ChocolateCandy {
     
+    public final String TAG_FILLING_TYPE = "filling-type";
+    
     public static enum FillingType {
         Nuts, Waffles
     }

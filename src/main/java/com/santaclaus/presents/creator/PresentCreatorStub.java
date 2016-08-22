@@ -1,4 +1,4 @@
-package com.santaclaus.presents.present.factory;
+package com.santaclaus.presents.creator;
 
 import com.santaclaus.presents.candies.AbstractCandy;
 import com.santaclaus.presents.candies.ChocolateCandy;

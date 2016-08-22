@@ -2,7 +2,7 @@ package com.santaclaus.presents.main;
 
 import com.santaclaus.presents.config.Config;
 import com.santaclaus.presents.present.Present;
-import com.santaclaus.presents.present.factory.PresentCreator;
+import com.santaclaus.presents.creator.PresentCreator;
 import com.santaclaus.presents.view.PresentPrinter;
 
 

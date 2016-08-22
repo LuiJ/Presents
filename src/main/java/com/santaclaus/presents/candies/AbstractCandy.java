@@ -2,6 +2,10 @@ package com.santaclaus.presents.candies;
 
 
 public abstract class AbstractCandy {
+        
+    public final String TAG_NAME = "name";
+    public final String TAG_WEIGHT = "weight";
+    public final String TAG_COST = "cost";
     
     private String name;
     private double weight;

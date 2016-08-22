@@ -1,8 +1,8 @@
 package com.santaclaus.presents.main;
 
-import com.santaclaus.presents.present.factory.PresentCreator;
-import com.santaclaus.presents.present.factory.PresentCreatorStub;
-import com.santaclaus.presents.present.factory.PresentCreatorXML;
+import com.santaclaus.presents.creator.PresentCreator;
+import com.santaclaus.presents.creator.PresentCreatorStub;
+import com.santaclaus.presents.creator.PresentCreatorXML;
 
 
 public class PresentCreatorFactory {

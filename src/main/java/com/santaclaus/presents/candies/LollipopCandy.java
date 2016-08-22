@@ -3,6 +3,8 @@ package com.santaclaus.presents.candies;
 
 public class LollipopCandy extends AbstractCandy {
 
+    public final String TAG_TASTE_TYPE = "taste-type";
+    
     public static enum TasteType {
         Cocacola, Fruits, Cake
     }

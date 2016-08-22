@@ -1,4 +1,4 @@
-package com.santaclaus.presents.present.factory;
+package com.santaclaus.presents.creator;
 
 import com.santaclaus.presents.present.Present;
 
