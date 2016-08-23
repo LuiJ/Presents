@@ -16,8 +16,8 @@ public abstract class AbstractCandyBuilder {
         double weight = Double.parseDouble(candyProperties.getProperty(AbstractCandy.TAG_WEIGHT));
         candy.setWeight(weight);
         
-        double cost = Double.parseDouble(candyProperties.getProperty(AbstractCandy.TAG_COST));      
-        candy.setCost(cost);
+        double price = Double.parseDouble(candyProperties.getProperty(AbstractCandy.TAG_PRICE));      
+        candy.setPrice(price);
         
         return candy;        
     }

@@ -25,8 +25,8 @@ public class FilePresentPrinter implements PresentPrinter {
             for (AbstractCandy candy : candies){
                 String name = candy.getName();
                 double weight = candy.getWeight();
-                double cost = candy.getCost();
-                file.write("Candy Name: "+name+" --> Weight: "+weight+"; Cost: "+cost+";\n");
+                double price = candy.getPrice();
+                file.write("Candy Name: "+name+" --> Weight: "+weight+"; Price: "+price+";\n");
             }
             
             PresentService calculator = new PresentService();
@@ -34,8 +34,8 @@ public class FilePresentPrinter implements PresentPrinter {
             double totalWeight = calculator.getTotalWeight(present);
             file.write("\nPresent Total Weight: "+totalWeight+"\n");
 
-            double totalCost = calculator.getTotalCost(present);
-            file.write("\nPresent Total Cost: "+totalCost);
+            double totalPrice = calculator.getTotalPrice(present);
+            file.write("\nPresent Total Price: "+totalPrice);
             
             System.out.println("\nPresent info has been printed into '"+path+"'.\n");
         }

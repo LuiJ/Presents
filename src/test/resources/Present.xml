@@ -5,26 +5,26 @@
     <candy type="lollipop">
         <name>Aeroflotskaya</name>
         <weight>1.5</weight>
-        <cost>2</cost>
+        <price>2</price>
         <taste-type>Cocacola</taste-type>
     </candy>
     <candy type="lollipopWithFilling">
         <name>Barbarys</name>
         <weight>1.8</weight>
-        <cost>1.6</cost>
+        <price>1.6</price>
         <taste-type>Cake</taste-type>
         <filling-type>Gum</filling-type>
     </candy>
     <candy type="chocolate">
         <name>Krasnaya shapochka</name>
         <weight>2.1</weight>
-        <cost>2.4</cost>
+        <price>2.4</price>
         <choco-type>Milk</choco-type>
     </candy>
     <candy type="chocolateWithFilling">
         <name>Gryliazh</name>
         <weight>2.3</weight>
-        <cost>2.5</cost>
+        <price>2.5</price>
         <choco-type>Dark</choco-type>
         <filling-type>Waffles</filling-type>
     </candy>

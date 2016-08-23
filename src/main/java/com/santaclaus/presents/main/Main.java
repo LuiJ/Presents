@@ -8,7 +8,7 @@ import com.santaclaus.presents.view.PresentPrinter;
 
 public class Main {
     
-    public static void main(String [] args){
+    public static void main(String [] args) {
         
         Config config = Config.INSTANCE;   
         String creatorType = config.getCreatorType();

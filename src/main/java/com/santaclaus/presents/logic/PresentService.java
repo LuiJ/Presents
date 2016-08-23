@@ -16,13 +16,13 @@ public class PresentService {
         return totalWeight;
     }
     
-    public double getTotalCost(Present present){
-        double totalCost = 0;
+    public double getTotalPrice(Present present){
+        double totalPrice = 0;
         List<AbstractCandy> candies = present.getCandies();
         for (AbstractCandy candy : candies){
-            totalCost += candy.getCost();
+            totalPrice += candy.getPrice();
         }
-        return totalCost;
+        return totalPrice;
     }
     
 }

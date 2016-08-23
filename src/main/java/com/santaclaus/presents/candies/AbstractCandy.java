@@ -5,18 +5,18 @@ public abstract class AbstractCandy {
         
     public static final String TAG_NAME = "name";
     public static final String TAG_WEIGHT = "weight";
-    public static final String TAG_COST = "cost";
+    public static final String TAG_PRICE = "price";
     
     private String name;
     private double weight;
-    private double cost;
+    private double price;
     
     public AbstractCandy(){}
     
-    public AbstractCandy(String name, double weight, double cost){
+    public AbstractCandy(String name, double weight, double price){
         this.name = name;
         this.weight = weight;
-        this.cost = cost;
+        this.price = price;
     }
 
     public String getName() {
@@ -34,15 +34,15 @@ public abstract class AbstractCandy {
         return weight;
     }
    
-    public void setCost(double cost){
-        this.cost = cost;
+    public void setPrice(double price){
+        this.price = price;
     }
-    public double getCost(){
-        return cost;
+    public double getPrice(){
+        return price;
     }
     
     @Override
     public String toString(){
-        return "Candy Name: "+name+" --> Weight: "+weight+"; Cost: "+cost+";";
+        return "Candy Name: "+name+" --> Weight: "+weight+"; Price: "+price+";";
     }
 }

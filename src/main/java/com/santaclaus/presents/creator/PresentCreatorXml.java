@@ -3,17 +3,21 @@ package com.santaclaus.presents.creator;
 import com.santaclaus.presents.candies.AbstractCandy;
 import com.santaclaus.presents.parser.PresentHandler;
 import com.santaclaus.presents.present.Present;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
+import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
+import org.xml.sax.SAXException;
 
 
-public class PresentCreatorXML implements PresentCreator {
+public class PresentCreatorXml implements PresentCreator {
     
-    private String xmlFilePath;    
+    private InputStream xmlFile;    
     
-    public PresentCreatorXML(String xmlFilePath){
-        this.xmlFilePath = xmlFilePath;        
+    public PresentCreatorXml(InputStream xmlFile){
+        this.xmlFile = xmlFile;        
     }
 
     @Override
@@ -25,21 +29,18 @@ public class PresentCreatorXML implements PresentCreator {
             SAXParserFactory factory = SAXParserFactory.newInstance();
             SAXParser saxParser = factory.newSAXParser();
             PresentHandler handler = new PresentHandler();
-            saxParser.parse(xmlFilePath, handler); 
+            saxParser.parse(xmlFile, handler); 
             
             List<AbstractCandy> candies = handler.getCandies();
             for (AbstractCandy candy : candies){
                 present.addCandy(candy);
             }            
         }
-        catch (Exception e){
-            e.printStackTrace();
-        }
+        catch (ParserConfigurationException | SAXException | IOException e){
+            throw new RuntimeException(e.getMessage(), e);
+        }       
         
-        
-        
-        return present;
-        
+        return present;        
     }
     
 }

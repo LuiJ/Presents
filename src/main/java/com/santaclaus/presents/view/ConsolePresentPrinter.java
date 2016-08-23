@@ -15,8 +15,8 @@ public class ConsolePresentPrinter implements PresentPrinter {
         for (AbstractCandy candy : candies){
             String name = candy.getName();
             double weight = candy.getWeight();
-            double cost = candy.getCost();
-            System.out.println("Candy Name: "+name+" --> Weight: "+weight+"; Cost: "+cost+";");
+            double price = candy.getPrice();
+            System.out.println("Candy Name: "+name+" --> Weight: "+weight+"; Price: "+price+";");
         }
         
         PresentService calculator = new PresentService();
@@ -24,8 +24,8 @@ public class ConsolePresentPrinter implements PresentPrinter {
         double totalWeight = calculator.getTotalWeight(present);
         System.out.println("\nPresent Total Weight: "+totalWeight);
         
-        double totalCost = calculator.getTotalCost(present);
-        System.out.println("\nPresent Total Cost: "+totalCost);
+        double totalPrice = calculator.getTotalPrice(present);
+        System.out.println("\nPresent Total Price: "+totalPrice);
         
     }
     
