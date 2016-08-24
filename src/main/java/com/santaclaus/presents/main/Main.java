@@ -18,11 +18,11 @@ public class Main {
         PresentCreator presentCreator = creatorFactory.create(creatorType);        
         Present present = presentCreator.create();
         
-        String printerType = config.getPrinterType();
+        String[] printerTypes = config.getPrinterTypes();       
         String filePath = config.getFilePath();
         
         PrinterFactory printerFactory = new PrinterFactory(filePath);
-        PresentPrinter printer = printerFactory.create(printerType);
+        PresentPrinter printer = printerFactory.create(printerTypes);
         printer.print(present);
         
     }

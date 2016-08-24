@@ -13,25 +13,25 @@ public enum Config {
     private static final String CREATOR_TYPE = "present-data-source";
     private static final String XML_FILE_PATH = "data-file";
     
-    private String printerType;
+    private String[] printerTypes;
     private String filePath;    
     private String creatorType;
     private String xmlFilePath;
     
     Config(){
-        ResourceBundle config = ResourceBundle.getBundle(CONFIGURATION_FILE_NAME); 
-        printerType = config.getString(PRINTER_TYPE);
+        ResourceBundle config = ResourceBundle.getBundle(CONFIGURATION_FILE_NAME);
+        printerTypes = config.getString(PRINTER_TYPE).replaceAll(" ", "").split(",");
         filePath = config.getString(FILE_PATH);
         creatorType = config.getString(CREATOR_TYPE);
         xmlFilePath = config.getString(XML_FILE_PATH);
     }
 
-    public String getPrinterType() {
-        return printerType;
+    public String[] getPrinterTypes() {
+        return printerTypes;
     }
 
-    public void setPrinterType(String printerType) {
-        this.printerType = printerType;
+    public void setPrinterTypes(String[] printerTypes) {
+        this.printerTypes = printerTypes;
     }
 
     public String getFilePath() {

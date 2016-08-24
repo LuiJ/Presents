@@ -2,6 +2,7 @@ package com.santaclaus.presents.main;
 
 import com.santaclaus.presents.view.ConsolePresentPrinter;
 import com.santaclaus.presents.view.FilePresentPrinter;
+import com.santaclaus.presents.view.MutiplePresentPrinter;
 import com.santaclaus.presents.view.PresentPrinter;
 
 
@@ -16,21 +17,22 @@ public class PrinterFactory {
         this.filePath = filePath;
     }
     
-    public PresentPrinter create(String printerType){
+    public PresentPrinter create(String ... printerTypes){
         
-        PresentPrinter printer = null;
+        MutiplePresentPrinter multiplePrinter = new MutiplePresentPrinter();
         
-        if (printerType.equals(CONSOLE_PRINTER)){
-            printer = new ConsolePresentPrinter();
-        }
-        else if (printerType.equals(FILE_PRINTER)){
-            printer = new FilePresentPrinter(filePath);
-        }
-        else {
-            throw new IllegalArgumentException("Illegal value of 'printer' param in 'configuration.properties' file.");
+        for (String printerType : printerTypes){
+            if (printerType.equals(CONSOLE_PRINTER)){
+                PresentPrinter consolePrinter = new ConsolePresentPrinter();
+                multiplePrinter.addPrinter(consolePrinter);                
+            }
+            if (printerType.equals(FILE_PRINTER)){
+                PresentPrinter filePrinter = new FilePresentPrinter(filePath);
+                multiplePrinter.addPrinter(filePrinter);
+            }
         }
         
-        return printer;
+        return multiplePrinter;
     }
     
 }

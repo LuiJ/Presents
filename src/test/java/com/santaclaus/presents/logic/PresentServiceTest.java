@@ -43,7 +43,9 @@ public class PresentServiceTest {
 
     private Present createPresent() {
         Present present = new Present();
-        CANDY_LIST.forEach(present::addCandy);
+        for (AbstractCandy candy : CANDY_LIST){
+            present.addCandy(candy);
+        }
         return present;
     }
     
