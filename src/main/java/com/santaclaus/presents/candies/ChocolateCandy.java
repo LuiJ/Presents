@@ -1,13 +1,12 @@
 package com.santaclaus.presents.candies;
 
+import com.santaclaus.presents.candies.properties.ChocoType;
+
 
 public class ChocolateCandy extends AbstractCandy {
     
     public static final String TAG_CHOCO_TYPE = "choco-type";
     
-    public static enum ChocoType {
-        Dark, Milk, White
-    }
     private ChocoType chocoType; 
     
     public ChocolateCandy(){}

@@ -2,6 +2,7 @@ package com.santaclaus.presents.parser;
 
 import com.santaclaus.presents.candies.AbstractCandy;
 import com.santaclaus.presents.candies.LollipopCandyWithFilling;
+import com.santaclaus.presents.candies.properties.FillingType;
 import java.util.Properties;
 
 
@@ -12,8 +13,7 @@ public class LollipopCandyWithFillingBuilder extends LollipopCandyBuilder {
         
         LollipopCandyWithFilling candy = (LollipopCandyWithFilling) super.build(candyProperties);
         
-        LollipopCandyWithFilling.FillingType fillingType = LollipopCandyWithFilling.FillingType
-                .valueOf(candyProperties.getProperty(LollipopCandyWithFilling.TAG_FILLING_TYPE));
+        FillingType fillingType = FillingType.valueOf(candyProperties.getProperty(LollipopCandyWithFilling.TAG_FILLING_TYPE));
         
         candy.setFillingType(fillingType);
         

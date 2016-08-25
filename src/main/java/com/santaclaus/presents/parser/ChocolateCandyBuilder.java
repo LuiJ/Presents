@@ -2,6 +2,7 @@ package com.santaclaus.presents.parser;
 
 import com.santaclaus.presents.candies.AbstractCandy;
 import com.santaclaus.presents.candies.ChocolateCandy;
+import com.santaclaus.presents.candies.properties.ChocoType;
 import java.util.Properties;
 
 
@@ -12,7 +13,7 @@ public class ChocolateCandyBuilder extends AbstractCandyBuilder {
         
         ChocolateCandy candy = (ChocolateCandy) super.build(candyProperties);
         
-        ChocolateCandy.ChocoType chocoType = ChocolateCandy.ChocoType
+        ChocoType chocoType = ChocoType
         .valueOf(candyProperties.getProperty(ChocolateCandy.TAG_CHOCO_TYPE));
         
         candy.setChocoType(chocoType);

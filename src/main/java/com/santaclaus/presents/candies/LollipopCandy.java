@@ -1,13 +1,11 @@
 package com.santaclaus.presents.candies;
 
+import com.santaclaus.presents.candies.properties.TasteType;
+
 
 public class LollipopCandy extends AbstractCandy {
 
     public static final String TAG_TASTE_TYPE = "taste-type";
-    
-    public static enum TasteType {
-        Cocacola, Fruits, Cake
-    }
     
     private TasteType tasteType;
     

@@ -1,13 +1,12 @@
 package com.santaclaus.presents.candies;
 
+import com.santaclaus.presents.candies.properties.ChocoType;
+import com.santaclaus.presents.candies.properties.FillingType;
+
 
 public class ChocolateCandyWithFilling extends ChocolateCandy {
     
     public static final String TAG_FILLING_TYPE = "filling-type";
-    
-    public static enum FillingType {
-        Nuts, Waffles
-    }
     
     private FillingType fillingType;
     

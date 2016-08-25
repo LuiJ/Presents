@@ -1,13 +1,12 @@
 package com.santaclaus.presents.candies;
 
+import com.santaclaus.presents.candies.properties.FillingType;
+import com.santaclaus.presents.candies.properties.TasteType;
+
 
 public class LollipopCandyWithFilling extends LollipopCandy {
     
     public static final String TAG_FILLING_TYPE = "filling-type";
-    
-    public static enum FillingType {
-        Jem, Gum
-    }
     
     private FillingType fillingType;
     

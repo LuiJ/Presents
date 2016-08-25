@@ -1,15 +1,13 @@
 package com.santaclaus.presents.logic;
 
-import static com.santaclaus.presents.candies.ChocolateCandy.*;
-import static com.santaclaus.presents.candies.LollipopCandy.*;
-
 import com.santaclaus.presents.candies.AbstractCandy;
 import com.santaclaus.presents.candies.ChocolateCandy;
 import com.santaclaus.presents.candies.LollipopCandy;
+import com.santaclaus.presents.candies.properties.ChocoType;
+import com.santaclaus.presents.candies.properties.TasteType;
 import com.santaclaus.presents.present.Present;
 
 import org.junit.Assert;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -23,8 +21,8 @@ public class PresentServiceTest {
     private static PresentService unitUnderTest = new PresentService();
 
     private static final List<AbstractCandy> CANDY_LIST = Arrays.asList(
-            new ChocolateCandy("Vaverka", 2.5, 3.5, ChocolateCandy.ChocoType.White),
-            new LollipopCandy("Cupa Cups", 1.3, 2.7, LollipopCandy.TasteType.Cake)
+            new ChocolateCandy("Vaverka", 2.5, 3.5, ChocoType.White),
+            new LollipopCandy("Cupa Cups", 1.3, 2.7, TasteType.Cake)
     );
     
     @Test

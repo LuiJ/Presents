@@ -1,9 +1,9 @@
 package com.santaclaus.presents.creator;
 
-import static com.santaclaus.presents.candies.ChocolateCandyWithFilling.*;
-
 import com.santaclaus.presents.candies.AbstractCandy;
 import com.santaclaus.presents.candies.ChocolateCandyWithFilling;
+import com.santaclaus.presents.candies.properties.ChocoType;
+import com.santaclaus.presents.candies.properties.FillingType;
 import com.santaclaus.presents.present.Present;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
@@ -53,10 +53,10 @@ public class PresentCreatorXmlTest {
 
         ChocolateCandyWithFilling chocolateCandy = (ChocolateCandyWithFilling)candy;
 
-        ChocolateCandyWithFilling.ChocoType actualChocoType = chocolateCandy.getChocoType();
+        ChocoType actualChocoType = chocolateCandy.getChocoType();
         Assert.assertEquals(ChocoType.Dark, actualChocoType);
         
-        ChocolateCandyWithFilling.FillingType actualFillingType = chocolateCandy.getFillingType();
+        FillingType actualFillingType = chocolateCandy.getFillingType();
         Assert.assertEquals(FillingType.Waffles, actualFillingType);
     }
 
